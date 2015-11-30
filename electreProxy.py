@@ -9,9 +9,11 @@ class NoticePage:
     ELECTRE_WS_URL = 'http://127.0.0.1:8080'
 
     def quatrieme(self, isbn):
+        """;"""
         return self.fetch_back_cover(isbn)
 
     def tabledesmatieres(self, isbn):
+        """;"""
         return self.fetch_table_of_content(isbn)
 
     def fetch_back_cover(self, isbn):
