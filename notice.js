@@ -1,4 +1,5 @@
-$(document).ready(function(){
+jQuery( document ).ready(function( $ ) {
+    
     var electreProxyUrl = "http://127.0.0.1:5000/";
 
     var icon_plus = 'icon_expand_plus.gif';
