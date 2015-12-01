@@ -11,7 +11,7 @@ class TableOfContentTransformator:
         if html == "":
             return ""
         else:
-            return '<ol style="list-style-type:none">' + html + '</ol>'
+            return '<ol>' + html + '</ol><br />'
 
     def split_by_level(self, xml_array, level, acc = ''):
         if(len(xml_array) == 0 or level < 0): return acc
@@ -22,7 +22,7 @@ class TableOfContentTransformator:
         if(current_level < level):
             return self.split_by_level(xml_array, level - 1, acc + "</ol>")
         if(current_level > level):
-            return self.split_by_level(xml_array, level + 1, acc + "<ol>")
+            return self.split_by_level(xml_array, level + 1, acc + '<ol>')
 
     def html_title(self, item, level):
         title = item.findtext("item")
@@ -31,4 +31,4 @@ class TableOfContentTransformator:
             content = title
         else:
             content = title + " (<em>page " + page + "</em>)"
-        return "<li>" + content + "</li>"
+        return '<li style="margin-left: ' + str(level*15) + 'px; font-size:'+ str(1.2 - 0.1 * level)  +'em">' + content + '</li>'

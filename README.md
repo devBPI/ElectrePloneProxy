@@ -6,7 +6,7 @@
  - Launch the **ElectreConnector** (https://github.com/devBPI/ElectreWebservice)
  - Make sure the connexion configuration (`ELECTRE_WS_URL`) in `/electreProxy.py` is right
  - Launch the micro-server `python libraryFindCatalogue.py`
- - Check the micro-server url in the `notice.js` file (`electreProxyUrl`) is correct
+ - Check if the micro-server url in the `notice.js` file (`electreProxyUrl`) is correct
 
 ## Tests
 

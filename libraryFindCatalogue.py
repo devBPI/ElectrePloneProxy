@@ -2,6 +2,7 @@ import flask
 from flask import request
 from flask import Flask
 from electreProxy import NoticePage
+from crossDomainDecorator import crossdomain
 
 app = Flask(__name__)
 
@@ -9,19 +10,21 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World!'
 
-@app.route('/quatrieme')
+@app.route('/quatrieme', methods=['GET', 'OPTIONS'])
+@crossdomain('*', 'GET', 'X-Requested-With')
 def quatrieme():
     isbn = request.args.get('isbn')
     resp = flask.Response(NoticePage().quatrieme(isbn))
-    resp.headers['Access-Control-Allow-Origin'] = '*'
     return resp
 
-@app.route('/tabledesmatieres')
+@app.route('/tabledesmatieres', methods=['GET', 'OPTIONS'])
+@crossdomain('*', 'GET', 'X-Requested-With')
 def tabledesmatieres():
     isbn = request.args.get('isbn')
     resp = flask.Response(NoticePage().tabledesmatieres(isbn))
-    resp.headers['Access-Control-Allow-Origin'] = '*'
     return resp
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
