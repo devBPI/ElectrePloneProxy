@@ -82,9 +82,11 @@ jQuery(document).ready(function ($) {
             '<div id="notice_table_content" class="notice_div" style="display: none;"> \
                 <p class="titre"></p> \
                 <a id="notice_table_content_ancre" name="notice_table_content_ancre"></a> \
+                <a href="#" id="table_of_content_expander">\
                 <span class="notice_title">Table des matières</span> \
-                <a href="#" id="table_of_content_expander"><img class="expand-titre notice_title" id="expand-titre-matiere" src="icon_expand_plus.gif"/></a> \
+                <img class="expand-titre notice_title" id="expand-titre-matiere" src="icon_expand_plus.gif"/></a> \
                 <div id="matiere"> \
+                    <hr />\
                     <div id="notice_tablecontent_content"> \
                     </div> \
                 </div> \
@@ -92,9 +94,11 @@ jQuery(document).ready(function ($) {
             <div id="notice_back_cover" class="notice_div" style="display: none;"> \
                 <p class="titre"></p> \
                 <a id="notice_back_cover_ancre" name="notice_back_cover_ancre"></a> \
+                <a href="#" id="back_cover_expander"> \
                 <span class="notice_title">Quatrième de couverture</span> \
-                <a href="#" id="back_cover_expander"><img class="expand-titre notice_title" id="expand-titre-quatrieme" src="icon_expand_plus.gif"/></a> \
+                <img class="expand-titre notice_title" id="expand-titre-quatrieme" src="icon_expand_plus.gif"/></a> \
                 <div id="quatrieme"> \
+                    <hr />\
                     <div id="notice_back_cover_content"> \
                     </div> \
                 </div> \
