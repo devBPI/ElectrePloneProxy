@@ -1,6 +1,6 @@
 jQuery( document ).ready(function( $ ) {
 
-    var electreProxyUrl = "http://127.0.0.1:5000/";
+    var electreProxyUrl = "http://127.0.0.1/";
 
     var icon_plus = 'icon_expand_plus.gif';
     var icon_minus = 'icon_expand_moins.gif';
