@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
                 xhr.setRequestHeader = function (name, value) {
                     if (name == 'X-Requested-With') return;
                     setRequestHeader.call(this, name, value);
-                }
+                };
                 return xhr;
             },
 
